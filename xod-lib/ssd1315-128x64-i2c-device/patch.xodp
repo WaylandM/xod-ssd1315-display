@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "boundLiterals": {
+        "__out__": "3Ch"
+      },
+      "description": "I²C address. 3Ch by default.",
+      "id": "BkG0IsN-6L",
+      "label": "ADDR",
+      "position": {
+        "units": "slots",
+        "x": 1,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-byte"
+    },
+    {
+      "id": "S1WAUoEW6L",
+      "label": "DEV",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 2
+      },
+      "type": "xod/patch-nodes/output-self"
+    },
+    {
+      "id": "ryA8sVZpL",
+      "label": "I2C",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 0
+      },
+      "type": "xod/i2c/input-i2c"
+    },
+    {
+      "id": "rylCIs4bpL",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 1
+      },
+      "type": "xod/patch-nodes/not-implemented-in-xod"
+    }
+  ]
+}

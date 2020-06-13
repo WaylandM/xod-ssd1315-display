@@ -1,0 +1,181 @@
+{
+  "links": [
+    {
+      "id": "BJcYIpE-pI",
+      "input": {
+        "nodeId": "HJKLTN-TU",
+        "pinKey": "H13R3IvGB"
+      },
+      "output": {
+        "nodeId": "SkVtL64-aL",
+        "pinKey": "__out__"
+      }
+    },
+    {
+      "id": "By0YUTNWaU",
+      "input": {
+        "nodeId": "HJKLTN-TU",
+        "pinKey": "BytC28DfH"
+      },
+      "output": {
+        "nodeId": "HJ-YIp4-pL",
+        "pinKey": "__out__"
+      }
+    },
+    {
+      "id": "ByQoJBbp8",
+      "input": {
+        "nodeId": "SJnc1r-TI",
+        "pinKey": "rJWRaN-68"
+      },
+      "output": {
+        "nodeId": "SyqD6N-aL",
+        "pinKey": "S1WAUoEW6L"
+      }
+    },
+    {
+      "id": "SJg3krWaL",
+      "input": {
+        "nodeId": "SJnc1r-TI",
+        "pinKey": "Hk7xTpEZpU"
+      },
+      "output": {
+        "nodeId": "HJ-YIp4-pL",
+        "pinKey": "__out__"
+      }
+    },
+    {
+      "id": "Skw21HWaU",
+      "input": {
+        "nodeId": "r1GKUp4-aI",
+        "pinKey": "__in__"
+      },
+      "output": {
+        "nodeId": "SJnc1r-TI",
+        "pinKey": "HJWep6NWp8"
+      }
+    },
+    {
+      "id": "SylsyBbTL",
+      "input": {
+        "nodeId": "SJnc1r-TI",
+        "pinKey": "Bylga6NZT8"
+      },
+      "output": {
+        "nodeId": "HJKLTN-TU",
+        "pinKey": "H1fx68wzB"
+      }
+    },
+    {
+      "id": "rJ0vTEb6I",
+      "input": {
+        "nodeId": "SyqD6N-aL",
+        "pinKey": "BkG0IsN-6L"
+      },
+      "output": {
+        "nodeId": "ryrtUTEbaU",
+        "pinKey": "__out__"
+      }
+    },
+    {
+      "id": "rk2DpE-pU",
+      "input": {
+        "nodeId": "SyqD6N-aL",
+        "pinKey": "ryA8sVZpL"
+      },
+      "output": {
+        "nodeId": "Hy8KLTNZ68",
+        "pinKey": "__out__"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "description": "A tree of graphic elements created using the xod/graphics library.",
+      "id": "HJ-YIp4-pL",
+      "label": "GFX",
+      "position": {
+        "units": "slots",
+        "x": 4,
+        "y": 0
+      },
+      "type": "xod/graphics/input-graphics"
+    },
+    {
+      "id": "HJKLTN-TU",
+      "position": {
+        "units": "slots",
+        "x": 5,
+        "y": 1
+      },
+      "type": "xod/core/act"
+    },
+    {
+      "id": "Hy8KLTNZ68",
+      "label": "I2C",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 1
+      },
+      "type": "xod/i2c/input-i2c"
+    },
+    {
+      "id": "SJnc1r-TI",
+      "position": {
+        "units": "slots",
+        "x": 3,
+        "y": 2
+      },
+      "type": "@/render"
+    },
+    {
+      "boundLiterals": {
+        "__out__": "True"
+      },
+      "description": "Makes the display react to incoming changes in a tree of graphic elements while `ACT` is true.",
+      "id": "SkVtL64-aL",
+      "label": "ACT",
+      "position": {
+        "units": "slots",
+        "x": 6,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-boolean"
+    },
+    {
+      "id": "SyqD6N-aL",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 2
+      },
+      "type": "@/ssd1315-128x64-i2c-device"
+    },
+    {
+      "description": "Pulses to acknowledge changes in the tree of graphic elements.",
+      "id": "r1GKUp4-aI",
+      "label": "ACK",
+      "position": {
+        "units": "slots",
+        "x": 4,
+        "y": 3
+      },
+      "type": "xod/patch-nodes/output-pulse"
+    },
+    {
+      "boundLiterals": {
+        "__out__": "3Ch"
+      },
+      "description": "I²C address. 3Ch by default.",
+      "id": "ryrtUTEbaU",
+      "label": "ADDR",
+      "position": {
+        "units": "slots",
+        "x": 1,
+        "y": 1
+      },
+      "type": "xod/patch-nodes/input-byte"
+    }
+  ]
+}

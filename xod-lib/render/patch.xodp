@@ -1,0 +1,66 @@
+{
+  "nodes": [
+    {
+      "description": "Triggers a new rendering process.",
+      "id": "Bylga6NZT8",
+      "label": "DO",
+      "position": {
+        "units": "slots",
+        "x": 2,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-pulse"
+    },
+    {
+      "id": "HJUCTVbpU",
+      "label": "DEV'",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 2
+      },
+      "type": "@/output-ssd1315-128x64-i2c-device"
+    },
+    {
+      "description": "Pulses when the rendering process is done.",
+      "id": "HJWep6NWp8",
+      "label": "DONE",
+      "position": {
+        "units": "slots",
+        "x": 1,
+        "y": 2
+      },
+      "type": "xod/patch-nodes/output-pulse"
+    },
+    {
+      "description": "A tree of graphic elements created using the xod/graphics library.",
+      "id": "Hk7xTpEZpU",
+      "label": "GFX",
+      "position": {
+        "units": "slots",
+        "x": 1,
+        "y": 0
+      },
+      "type": "xod/graphics/input-graphics"
+    },
+    {
+      "id": "rJWRaN-68",
+      "label": "DEV",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 0
+      },
+      "type": "@/input-ssd1315-128x64-i2c-device"
+    },
+    {
+      "id": "rklT6E-aL",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 1
+      },
+      "type": "xod/patch-nodes/not-implemented-in-xod"
+    }
+  ]
+}
