@@ -1,55 +1,55 @@
 
-#include "SSD1306.h"
+#include "SSD1315.h"
 
-SSD1306::SSD1306(TwoWire* wire, uint8_t i2cAddress, uint8_t* buffer) {
+SSD1315::SSD1315(TwoWire* wire, uint8_t i2cAddress, uint8_t* buffer) {
     _wire = wire ? wire : &Wire;
     _i2cAddress = i2cAddress;
     _buffer = buffer;
-    _width = SSD1306_DISPLAY_WIDTH;
-    _height = SSD1306_DISPLAY_HEIGHT;
+    _width = SSD1315_DISPLAY_WIDTH;
+    _height = SSD1315_DISPLAY_HEIGHT;
 }
 
-void SSD1306::sendCommand(uint8_t command) {
+void SSD1315::sendCommand(uint8_t command) {
     _wire->beginTransmission(_i2cAddress);
     _wire->write(0x80);
     _wire->write(command);
     _wire->endTransmission();
 }
 
-void SSD1306::begin() {
+void SSD1315::begin() {
     _wire->begin();
-    sendCommand(SSD1306_DISPLAY_OFF);
-    sendCommand(SSD1306_SET_DISPLAY_CLOCK);
+    sendCommand(SSD1315_DISPLAY_OFF);
+    sendCommand(SSD1315_SET_DISPLAY_CLOCK);
     sendCommand(0x80);
-    sendCommand(SSD1306_SET_MULTIPLEX_RATIO);
+    sendCommand(SSD1315_SET_MULTIPLEX_RATIO);
     sendCommand(0x3F);
-    sendCommand(SSD1306_SET_DISPLAY_OFFSET);
+    sendCommand(SSD1315_SET_DISPLAY_OFFSET);
     sendCommand(0x00);
-    sendCommand(SSD1306_SET_START_LINE | 0);
-    sendCommand(SSD1306_CHARGE_DCDC_PUMP);
+    sendCommand(SSD1315_SET_START_LINE | 0);
+    sendCommand(SSD1315_CHARGE_DCDC_PUMP);
     sendCommand(0x14);
-    sendCommand(SSD1306_ADDR_MODE);
+    sendCommand(SSD1315_ADDR_MODE);
     sendCommand(0x00);
-    sendCommand(SSD1306_SET_REMAP_L_TO_R);
-    sendCommand(SSD1306_SET_REMAP_T_TO_D);
-    sendCommand(SSD1306_SET_COM_PINS);
+    sendCommand(SSD1315_SET_REMAP_L_TO_R);
+    sendCommand(SSD1315_SET_REMAP_T_TO_D);
+    sendCommand(SSD1315_SET_COM_PINS);
     sendCommand(0x12);
-    sendCommand(SSD1306_SET_CONTRAST);
+    sendCommand(SSD1315_SET_CONTRAST);
     sendCommand(0xFF);
-    sendCommand(SSD1306_SET_PRECHARGE_PERIOD);
+    sendCommand(SSD1315_SET_PRECHARGE_PERIOD);
     sendCommand(0xF1);
-    sendCommand(SSD1306_SET_VCOM_DESELECT);
+    sendCommand(SSD1315_SET_VCOM_DESELECT);
     sendCommand(0x40);
-    sendCommand(SSD1306_RAM_ON);
-    sendCommand(SSD1306_INVERT_OFF);
-    sendCommand(SSD1306_DISPLAY_ON);
+    sendCommand(SSD1315_RAM_ON);
+    sendCommand(SSD1315_INVERT_OFF);
+    sendCommand(SSD1315_DISPLAY_ON);
 }
 
-void SSD1306::sendBuffer() {
-    sendCommand(SSD1306_ADDR_PAGE);
+void SSD1315::sendBuffer() {
+    sendCommand(SSD1315_ADDR_PAGE);
     sendCommand(0);
     sendCommand(_height / 8 - 1);
-    sendCommand(SSD1306_ADDR_COLUMN);
+    sendCommand(SSD1315_ADDR_COLUMN);
     sendCommand(0);
     sendCommand(_width - 1);
     for (uint16_t i = 0; i < _width * _height / 8; i++) {
@@ -64,11 +64,11 @@ void SSD1306::sendBuffer() {
     }
 }
 
-void SSD1306::clearScreen() {
+void SSD1315::clearScreen() {
     memset(_buffer, 0, _width * _height / 8);
 }
 
-void SSD1306::renderScanlinePart(int16_t scanline, int16_t xmin, int16_t xmax, const uint16_t* lineBuffer) {
+void SSD1315::renderScanlinePart(int16_t scanline, int16_t xmin, int16_t xmax, const uint16_t* lineBuffer) {
     if ((scanline >= _height) || (scanline < 0))
         return;
     if ((xmin < 0) || (xmax < 0) || (xmin >= _width) || (xmax >= _width) || (xmin > xmax))
