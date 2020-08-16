@@ -1,4 +1,5 @@
 {
+  "description": "Renders a tree of graphic elements and display them on the device.",
   "nodes": [
     {
       "description": "Triggers a new rendering process.",
@@ -12,6 +13,7 @@
       "type": "xod/patch-nodes/input-pulse"
     },
     {
+      "description": "The display device.",
       "id": "HJUCTVbpU",
       "label": "DEV'",
       "position": {
@@ -44,6 +46,7 @@
       "type": "xod/graphics/input-graphics"
     },
     {
+      "description": "The display device.",
       "id": "rJWRaN-68",
       "label": "DEV",
       "position": {

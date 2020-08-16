@@ -1,4 +1,5 @@
 {
+  "description": "A quick-start node drives an SSD1315 based monochrome 128x64 TFT LCD connected through an I2C interface.",
   "links": [
     {
       "id": "BJcYIpE-pI",
