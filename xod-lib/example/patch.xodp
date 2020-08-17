@@ -1,10 +1,65 @@
 {
   "links": [
     {
-      "id": "BkaYlKM6I",
+      "id": "B1DxzmEwzw",
       "input": {
-        "nodeId": "HJ78eKzpU",
-        "pinKey": "H1BWK7v67U"
+        "nodeId": "S1geMQVvMD",
+        "pinKey": "r1Jzn4D9I"
+      },
+      "output": {
+        "nodeId": "r1ZeG74PMv",
+        "pinKey": "SJ89UNvq8"
+      }
+    },
+    {
+      "id": "B1IZSEvzv",
+      "input": {
+        "nodeId": "r1qlSVwGw",
+        "pinKey": "BJgmVh-7I"
+      },
+      "output": {
+        "nodeId": "r1ZeG74PMv",
+        "pinKey": "BJ5uO4w9U"
+      }
+    },
+    {
+      "id": "H1GZr4PfP",
+      "input": {
+        "nodeId": "r1qlSVwGw",
+        "pinKey": "Sk-lm42W7I"
+      },
+      "output": {
+        "nodeId": "r1eSi0G6U",
+        "pinKey": "Bklhkb9KfU"
+      }
+    },
+    {
+      "id": "HJOdXVvfv",
+      "input": {
+        "nodeId": "r1eSi0G6U",
+        "pinKey": "By9QmbJ78"
+      },
+      "output": {
+        "nodeId": "S1VefmNvGw",
+        "pinKey": "r1H_oipZb"
+      }
+    },
+    {
+      "id": "HkdxM7VDzw",
+      "input": {
+        "nodeId": "r1ZeG74PMv",
+        "pinKey": "SkY_U4D5I"
+      },
+      "output": {
+        "nodeId": "Bkgzm4wMD",
+        "pinKey": "HJrGxGPcI"
+      }
+    },
+    {
+      "id": "Hy4KGVDGv",
+      "input": {
+        "nodeId": "rJgwGVPfw",
+        "pinKey": "ByXhkbqFz8"
       },
       "output": {
         "nodeId": "BJ4FlKf6U",
@@ -12,35 +67,46 @@
       }
     },
     {
-      "id": "S1BSiCMpI",
+      "id": "S1KgzXNDzD",
+      "input": {
+        "nodeId": "S1VefmNvGw",
+        "pinKey": "BJlHojaWZ"
+      },
+      "output": {
+        "nodeId": "S1geMQVvMD",
+        "pinKey": "HJyl3VPc8"
+      }
+    },
+    {
+      "id": "SJhxzm4wzP",
+      "input": {
+        "nodeId": "r1ZeG74PMv",
+        "pinKey": "HJywIVwq8"
+      },
+      "output": {
+        "nodeId": "SkHeMXNPGP",
+        "pinKey": "HJU8CE2lW"
+      }
+    },
+    {
+      "id": "SyNbSVvfv",
+      "input": {
+        "nodeId": "r1qlSVwGw",
+        "pinKey": "HJ6Zd_J8L"
+      },
+      "output": {
+        "nodeId": "SJuxS4DMw",
+        "pinKey": "HyzldOJI8"
+      }
+    },
+    {
+      "id": "SyYKzVwMD",
       "input": {
         "nodeId": "r1eSi0G6U",
         "pinKey": "ByXhkbqFz8"
       },
       "output": {
-        "nodeId": "HJ78eKzpU",
-        "pinKey": "ry-bFmDaQL"
-      }
-    },
-    {
-      "id": "Sk-RKYfaL",
-      "input": {
-        "nodeId": "HJ78eKzpU",
-        "pinKey": "Hyzg3H_5U"
-      },
-      "output": {
-        "nodeId": "HkgAFtfa8",
-        "pinKey": "By_gJtzpI"
-      }
-    },
-    {
-      "id": "rkvBoRzpI",
-      "input": {
-        "nodeId": "S1T8xKG68",
-        "pinKey": "HJ-YIp4-pL"
-      },
-      "output": {
-        "nodeId": "r1eSi0G6U",
+        "nodeId": "rJgwGVPfw",
         "pinKey": "Bklhkb9KfU"
       }
     }
@@ -54,53 +120,109 @@
       "id": "BJ4FlKf6U",
       "position": {
         "units": "slots",
-        "x": 2,
+        "x": -3,
         "y": -1
       },
       "type": "xod/graphics/canvas"
     },
     {
-      "boundLiterals": {
-        "B1VZtmDa7L": "14",
-        "BygbYmwpQU": "0",
-        "SJ7WFXvamU": "104",
-        "SkWF7wa7L": "64"
+      "id": "Bkgzm4wMD",
+      "position": {
+        "units": "slots",
+        "x": -2,
+        "y": 0
       },
-      "id": "HJ78eKzpU",
+      "type": "wayland/bmp280-barometer/bmp280-device"
+    },
+    {
+      "boundLiterals": {
+        "HJTIija-W": "0"
+      },
+      "id": "S1VefmNvGw",
+      "position": {
+        "units": "slots",
+        "x": 8,
+        "y": 4
+      },
+      "type": "xod/core/format-number"
+    },
+    {
+      "boundLiterals": {
+        "Sk3QnVv98": "101325"
+      },
+      "id": "S1geMQVvMD",
+      "position": {
+        "units": "slots",
+        "x": 8,
+        "y": 3
+      },
+      "type": "wayland/bmp280-barometer/calculate-altitude"
+    },
+    {
+      "id": "SJuxS4DMw",
+      "position": {
+        "units": "slots",
+        "x": -9,
+        "y": 3
+      },
+      "type": "xod-dev/ssd1306-display/ssd1306-128x64-i2c-device"
+    },
+    {
+      "boundLiterals": {
+        "B13SCNhl-": "0.5"
+      },
+      "id": "SkHeMXNPGP",
+      "position": {
+        "units": "slots",
+        "x": 4,
+        "y": 0
+      },
+      "type": "xod/core/clock"
+    },
+    {
+      "id": "r1ZeG74PMv",
       "position": {
         "units": "slots",
         "x": 2,
         "y": 1
       },
-      "type": "xod/graphics/image"
-    },
-    {
-      "id": "HkgAFtfa8",
-      "position": {
-        "units": "slots",
-        "x": 3,
-        "y": 0
-      },
-      "type": "@/biomaker-bitmap"
-    },
-    {
-      "id": "S1T8xKG68",
-      "position": {
-        "units": "slots",
-        "x": 0,
-        "y": 3
-      },
-      "type": "@/ssd1315-128x64-i2c"
+      "type": "wayland/bmp280-barometer/read-pressure"
     },
     {
       "boundLiterals": {
         "By9QmbJ78": "\"Biomaker\"",
-        "Byg9Q7WJ7U": "2"
+        "Byg9Q7WJ7U": "2",
+        "H1b9mmW1mL": "32",
+        "Skz5QQWJQU": "16"
       },
       "id": "r1eSi0G6U",
       "position": {
         "units": "slots",
-        "x": 2,
+        "x": -3,
+        "y": 3
+      },
+      "type": "xod/graphics/text"
+    },
+    {
+      "id": "r1qlSVwGw",
+      "position": {
+        "units": "slots",
+        "x": -4,
+        "y": 4
+      },
+      "type": "xod-dev/ssd1306-display/render"
+    },
+    {
+      "boundLiterals": {
+        "By9QmbJ78": "\"Altitude (m):\"",
+        "Byg9Q7WJ7U": "2",
+        "H1b9mmW1mL": "0",
+        "Skz5QQWJQU": "0"
+      },
+      "id": "rJgwGVPfw",
+      "position": {
+        "units": "slots",
+        "x": -3,
         "y": 2
       },
       "type": "xod/graphics/text"
